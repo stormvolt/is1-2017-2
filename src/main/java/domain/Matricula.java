@@ -1,14 +1,30 @@
 package domain;
 
-public class Matricula implements BaseEntity<Long> {
-	private Long id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
+@Entity
+public class Matricula implements BaseEntity<Long> {
+	@Id
+	private Long id;
+	
+	@ManyToOne
+	@JoinColumn(name="curso_id")
 	private Curso curso;
 
+	@ManyToOne
+	@JoinColumn(name="alumno_codigo")
 	private Alumno alumno;
 
+	@Column
 	private Double nota;
 
+	@Column(length=128)
 	private String semestre;
 
 	@Override
