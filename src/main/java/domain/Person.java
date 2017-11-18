@@ -15,8 +15,6 @@ import javax.persistence.SequenceGenerator;
 public class Person implements BaseEntity<Long> {
 
 	@Id
-	@SequenceGenerator(name = "person_id_generator", sequenceName = "person_id_seq", allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "person_id_generator")
 	private Long id;
 
 	@Column(length = 64)

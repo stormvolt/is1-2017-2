@@ -20,8 +20,6 @@ import javax.persistence.Table;
 public class Account implements BaseEntity<Long> {
 
 	@Id
-	@SequenceGenerator(name = "account_id_generator", sequenceName = "account_id_seq", allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "account_id_generator")
 	private Long id;
 
 	@Column(unique = true, nullable = false, updatable = false, length = 64)

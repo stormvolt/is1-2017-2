@@ -1,12 +1,11 @@
 package config;
+import org.jtwig.spring.JtwigViewResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-
-import com.lyncode.jtwig.mvc.JtwigViewResolver;
 
 @Configuration
 @EnableWebMvc

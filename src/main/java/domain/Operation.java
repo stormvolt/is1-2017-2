@@ -19,8 +19,6 @@ public class Operation implements BaseEntity<Long> {
 	}
 	
 	@Id
-	@SequenceGenerator(name = "operation_id_generator", sequenceName = "operation_id_seq", allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "operation_id_generator")
 	private Long id;
 	
 	@Enumerated(EnumType.STRING)
