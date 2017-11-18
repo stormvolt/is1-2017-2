@@ -1,4 +1,4 @@
-# Práctica Calificada - Ingeniería de Software I - 2017-I #
+# Práctica Calificada - Ingeniería de Software I - 2017-II #
 
 ## Requisitos ##
 
