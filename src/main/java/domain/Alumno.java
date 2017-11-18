@@ -1,13 +1,27 @@
 package domain;
 
-public class Alumno implements BaseEntity<Long> {
-	private Long id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "alumnos")
+public class Alumno implements BaseEntity<Long> {
+	@Id
+	private Long id;
+	
+	@Column(length=256)
 	private String nombres;
 	
+	@Column(name="ap_pat", length=128, nullable=false)
 	private String apellidoPaterno;
-
+	
+	@Column(name="ap_mat", length=128)
 	private String apellidoMaterno;
+	
+	@Column(length=19, unique=true)
+	public String dni;
 
 	@Override
 	public Long getId() {
@@ -21,6 +35,14 @@ public class Alumno implements BaseEntity<Long> {
 
 	public String getNombres() {
 		return nombres;
+	}
+
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
 
 	public void setNombres(String nombres) {
